@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<p id="timer"></p>
+    </body>
+    <script type="text/javascript">
+    	var timer = document.getElementById("timer");
+    	var num = 5;
+    	var str = "";
+    	window.onload = function(){
+    		var interval = setInterval(function(){
+    			var str = "还有" + num + "秒跳转页面";
+    			timer.innerHTML = str;
+    		}, 1000)
+    		if(num == 0){
+    			clearInterval(intervalId);
+    			location.href = "https://www.2345.com/";
+    		}
+    		num = num - 1;
+    		/*
+    		setTimeout(function(){
+    			num = num - 1;
+    			console.log("还有" + num + "秒进行跳转");
+    		}, 1000)
+    		timer.innerHTML = num;
+    		*/
+    	}
+    </script>
+</html>

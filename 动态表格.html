@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示文档</title>
+    <style type="text/css">
+    </style>
+</head>
+<body>  
+	<h3>请输入表格行列数：</h3>
+    <input type="text" id="rows" style="width:50px"/>行
+    <input type="text" id="cols" style="width:50px"/>列<br/><br/>
+    <input type="button" value="创建" onclick="creatTab()">
+    <div id="div1"></div>
+	<script>
+    function creatTab(){
+        rows=document.getElementById('rows').value;
+        cols=document.getElementById('cols').value;
+        div1=document.getElementById('div1');
+        var tab='<table border=1 width=400 height=200">';
+        for(var i=0;i<rows;i++){
+            tab+='<tr>';
+            for(var j=0;j<cols;j++){
+                tab+="<td>"+"</td>";
+            }
+             tab+='</tr>';
+        }    
+        tab+='</table>';
+        div1.innerHTML=tab
+    }
+	</script>
+</body>
+</html>

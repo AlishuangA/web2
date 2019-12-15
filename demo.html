@@ -1,0 +1,100 @@
+﻿<!DOCTYPE>
+<html>
+ <head>
+	<title>calculate </title>
+	<meta http-equiv = "Content-Type" content = "text/html;charaset = utf-8"/>
+	<style type="text/css">
+		body{
+			font:bolder 26px 楷体;
+			
+		}
+		#result{
+			text-align:right;
+		}
+		table,td{
+			border:1px solid #C0C0C0;			
+		}
+		td{
+			padding:10px;
+		}
+		button{
+			width:50px;
+			height:50px;
+		}		
+	</style>
+  </head>
+ <body>
+	<table id="container">
+			<tr>
+				<td colspan="3" id="result">0</td>
+				<td><button type="button" value="C">C</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="1" >1</button></td>
+				<td><button type="button" value="2">2</button></td>
+				<td><button type="button" value="3">3</button></td>
+				<td><button type="button" value="+">+</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="4">4</button></td>
+				<td><button type="button" value="5">5</button></td>
+				<td><button type="button" value="6">6</button></td>
+				<td><button type="button" value="-">-</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="7">7</button></td>
+				<td><button type="button" value="8">8</button></td>
+				<td><button type="button" value="9">9</button></td>
+				<td><button type="button" value="*">*</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="0">0</button></td>
+				<td><button type="button" value=".">.</button></td>				
+				<td><button type="button" value="=">=</button></td>
+				<td><button type="button" value="/">/</button></td>
+			</tr>	
+				
+		</table>	
+ </body>
+ <script>
+ 	/*
+ 		1、先得到要操作的元素的BOM对象
+ 		2、给具体的网页元素绑定事件，以及事件触发时的回调函数
+ 		3、触发事件时，在回调函数中完成具体逻辑业务的处理
+ 	 */
+ 	
+ 	var result = document.getElementById("result");
+ 	var container = document.getElementById("container");
+ 	var btnList = container.getElementsByTagName("button");
+ 	for(var i = 0; i < btnList.length; i++){
+ 		btnList[i].onclick = function(){
+ 			switch(this.innerHTML){
+ 				case "c":
+ 					clearResult();//清空result
+ 					break;
+ 				case "=":
+ 					calculate();//eval(result.innerHTML)
+ 					break;
+ 				default:
+ 					addStr(this.innerHTML);//字符串拼接显示到result
+ 					break;
+ 			}
+ 		}
+ 	}
+
+ 	function clearResult(){
+ 		result.innerHTML =0;
+ 	}
+ 	function calculate(){
+ 		result.innerHTML = eval(result.innerHTML);
+ 	}
+ 	function addStr(str){
+ 		if(result.innerHTML == 0){
+ 			result.innerHTML = str;
+ 		}
+ 		else{
+ 			result.innerHTML = result.innerHTML + str;
+ 		}
+ 	}
+ </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<ul id="fruit">
+    		<li class="fontcolor">香蕉</li>
+    		<li class="fontcolor">苹果</li>
+    		<li class="fontcolor">橘子</li>
+    		<li>葡萄</li>
+    		<li>芒果</li>
+    		<li>西瓜</li>
+    		<li>榴莲</li>
+    	</ul>
+    	<ul>
+    		<li class="fontcolor">荔枝</li>
+    	</ul>
+    </body>
+    <script type="text/javascript">
+    	var fruit = document.getElementById("fruit");
+    	var liList = fruit.getElementsByClassName("fontcolor");
+    	for(var i = 0; i < liList.length; i++){
+    		liList[i].style.color = "red";
+    	}
+
+    	/*
+    	var liList = document.getElementsByTagName("li");
+    	for(var i = 0; i < liList.length; i++){
+    		if(i<3){
+    			liList[i].innerHTML = liList[i].innerHTML + i;
+    			liList[i].style.color = "red";
+			}
+			else{
+				liList[i].innerHTML = liList[i].innerHTML + i;
+    			liList[i].style.color = "#367";
+			}
+    	}
+    	*/
+    	//liList.innerHTML = "水果";
+    </script>
+</html>

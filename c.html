@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<!--->
+    	url中？之后出现的是传递的参数
+    	参数名=参数值&参数名=参数值   newId=2&newType=8
+    	<a href="">demo.a</a>
+    	<-->
+    </body>
+    <script type="text/javascript">
+    	window.onload = function(){
+    		var str = location.search();
+    		str = str.slice(1);
+    		var arr = str.split("&");
+    		var obj={};
+    		for(var i = 0; i < arr.length; i++){
+    			var arr1=arr[i].split("=");
+    			obj[arr1[0]] = arr1[1];
+    		}
+    		console.log(obj);
+    	}
+    </script>
+</html>

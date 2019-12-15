@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        	td{
+        		width:100px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<table border="1" cellspacing="0">
+    		<tr>
+    			<td>
+    			<button>点击删除行0</button>
+    			</td>
+    			<td></td>
+    			<td></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<button>点击删除行1</button>
+    			</td>
+    			<td></td>
+    			<td></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<button>点击删除行2</button>
+    			</td>
+    			<td></td>
+    			<td></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<button>点击删除行3</button>
+    			</td>
+    			<td></td>
+    			<td></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td>
+    			<button>点击删除行4</button>
+    			</td>
+    			<td></td>
+    			<td></td>
+    			<td></td>
+    		</tr>
+    	</table>
+    </body>
+    <script type="">
+    	var btnList = document.getElementsByTagName("button");
+    	for(var i = 0; i < btnList.length; i++){
+    		btnList[i].onclick = function(){
+    			var trNode = this.parentNode.parentNode;
+    			trNode.parentNode.removeChild(trNode);
+    		}
+    	}
+    </script>
+</html>

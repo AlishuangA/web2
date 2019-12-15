@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<div id="container">
+    		<p>这是一个段落</p>
+    	</div>
+    </body>
+    <script type="text/javascript">
+    	/*
+    	inner.HTML用于设置或者获取双标记标签的网页元素、
+    	标签
+    	*/
+    	var container = document.getElementById("container");
+    	container.onclick = function(){
+    		console.log("this.innerHTML");
+    		this.innerHTML = "<h3>这是一个标题</h3>";
+    	}
+    </script>
+</html>

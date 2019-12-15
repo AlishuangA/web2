@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #container{
+                width:1000px;
+                margin:0 auto;
+                height:300px;
+                border:1px solid red;
+            }
+            img{
+                width:200px;
+                height:200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src="C:/Users/远方人/Pictures/003.jpg"/>
+        </div>
+        <button id="btn1">appendChild</button>
+        <button id="btn2">insetBefore</button>
+        <button id="btn3">insetAfter</button>
+    </body>
+    <script type="text/javascript">
+        var container = document.getElementById("container");
+        var btn1 = document.getElementById("btn1");
+        //parentNode.appendChild()向父节点标签内部最后的位置上添加子节点
+        btn1.onclick = function(){
+    	    var imgNode = document.createElement("img");
+            //
+            imgNode.src = "C:/Users/远方人/Pictures/001.jpg";
+            imgNode.setAttribute("style", "border:2px solid #688888")
+            container.appendChild(imgNode);
+        }
+
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function(){
+            var imgNode = document.createElement("img");
+            imgNode.src = "C:/Users/远方人/Pictures/006.jpg";
+            container.insertBefore(imgNode, container.firstElementChildren[0]);
+        }
+
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = function(){
+            var imgNode = document.createElement("img");
+            imgNode.src = "C:/Users/远方人/Pictures/007.jpg";
+            container.insertBefore(imgNode, container.firstElementChildren[0]);
+        }
+    </script>
+</html>

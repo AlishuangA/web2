@@ -1,0 +1,87 @@
+/*
+* @Author: 远方人
+* @Date:   2019-12-10 22:03:05
+* @Last Modified by:   远方人
+* @Last Modified time: 2019-12-15 19:38:08
+*/
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.box{
+	width: 1200px;
+	height: 383px;
+	margin: 100px auto;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.slider{
+	width: 8400px;
+	position: absolute;
+	left: -1200px;
+}
+.slide{
+	width: 1200px;
+	overflow: hidden;
+	float: left; 
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	top: 175px;
+	line-height: 50px;
+	background: rgb(255,0,0);
+	font-size: 30px;
+	position: absolute;
+	opacity: 0;
+}
+.boxx{
+	height: 18px;
+	margin-top: 25px;
+	background: #ccc;
+}
+.boxxx{
+	position: relative;
+	margin-left: 180px;
+}
+.content{
+	font-size: 15px;
+	position: relative;
+	top: -22px;
+	margin-left: 500px;
+}
+.picture{
+	margin-left: 150px;
+	position: relative;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+.nav{
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
+}
+.nav>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+	text-align: center;
+}
+.nav .action{
+	background: red;
+}

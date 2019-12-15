@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+    	.imgborder{
+			border:;
+    	}
+    </style>
+    <body>
+    	<img src="C:\Users\远方人\Pictures\006.jpg" id="img1"/>
+    </body>
+
+    <script type="text/javascript">
+    	/*
+    	
+    	 */
+    	var img1 = document.getElementById("img1");
+    	img1.onclick =  function(){
+    		this.setAttribute("src","C:/Users/远方人/Pictures/007.jpg");
+    		console.log(this.getAttribute("src"))
+    	}
+    	img1.ocmouseover = function(){
+    		this.setAttribute("class","imgborder");
+    	}
+    	img1.ocmouseout = function(){
+    		this.removeAttribute("class");
+    	}
+    </script>
+</html>

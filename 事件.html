@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+	<div class="box"></div><br/>
+	<button id="start">开始</button>
+	<button id="stop">停止</button><br/><br/>
+
+
+	<div id="container">
+		<p id="p1">
+			<button id="btn1">点击</button>
+		</p>
+	</div><br/><br/>
+	<a href="http://www.baidu.com" id="link">百度</a>
+	<input type="text" id="txt"/>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			height: 200px;
+			width: 200px;
+			background: red;
+		}
+	</style>
+</body>
+<script type="text/javascript">
+	/*
+	e.targrt表示事件源对象
+	e.currentTarget当前监听的事件DOM对象
+	e.stopPropagation阻止事件的冒泡过程
+	 */
+	var container = document.getElementById("container");
+	var p1 = document.getElementById("p1");
+	var btn1 = document.getElementById("btn1");
+	btn1.onclick = function(e) {
+		e.stopPropagation();
+		console.log(e.target);
+	}
+	p1.onclick = function(e) {
+		console.log(e.target);
+		console.log(e.currentTarget);
+	}
+	var link = document.getElementById("link");
+	link.onclick = function(e) {
+		e.preventDefault();
+	}
+	var txt = document.getElementById("txt");
+	txt.onkeypress = function(e) {
+		console.log(e.keyCode);
+	}
+	/*
+	事件对象，有浏览器自动传入
+	可以在事件回调函数中直接使用
+	 */
+	/*
+	window.onload = function(e){
+		console.log(e);
+	}
+	var box = document.getElementsByClassName("box")[0];
+	box.onmouseover = function(e) {
+		console.log(e.clientX,e.clientY);
+		console.log(e.screenX,e.screenY);
+	}
+	box.onmousemove = function(e) {
+		console.log(e.clientX,e.clientY);
+		console.log(e.screenX,e.screenY);
+	}
+	*/
+
+
+	/*
+	var start = document.getElementById("start");
+	var stop = document.getElementById("stop");
+	var box = document.getElementsByClassName("box")[0];
+	var intervalId;
+	start.onclick = function(){
+		intervalId = setInterval(function(){
+			var styleObj = getComputedStyle(box);
+			var boxHeight = parseInt(styleObj["height"]);
+			var boxWidth = parseInt(styleObj["width"]);
+			var boxMarginLeft = parseInt(styleObj["marginLeft"]);
+			box.style.height = boxHeight + 1 + "px";
+			box.style.width = boxWidth + 1 + "px";
+			box.style.marginLeft = boxMarginLeft + 1 + "px";
+			console.log(box.style.height);
+			console.log(box.style.width);
+			console.log(box.style.marginLeft);
+		},30);
+	}
+	stop.onclick = function(){
+			clearInterval(intervalId);
+	}
+	*/
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        	td{
+        		width:50px;
+        		height:30px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<table border="1" align="center">
+    		<tr id="tr1">
+    			<td id="tddom">11</td>
+    			<td>22</td>
+    			<td>33</td>
+    		</tr>
+    		<tr>
+    			<td>44</td>
+    			<td>55</td>
+    			<td>66</td>
+    		</tr>
+    		<tr>
+    			<td>77</td>
+    			<td>88</td>
+    			<td>99</td>
+    		</tr>
+    		<tr>
+    			<td>10</td>
+    			<td>11</td>
+    			<td>12</td>
+    		</tr>
+    	</table>
+    </body>
+    <script type="text/javascript">
+    	document.onclick = function(){
+    		var tr1 = document.getElementById("tr1");
+    		console.log(tr1.firstChild);
+    		//包含有空格、换行、注释等节点对象的
+    		tr1.firstElementChild.style.color = "red";
+    		console.log(tr1.lastChild);
+    		//只包含有元素节点
+    		tr1.firstElementChild.style.color = "blue";
+    		console.log(tr1.firstElementChild);
+
+    		var tddom = document.getElementById("tddom");
+    		tddom.parentNode.style.background = "#376";
+    	}
+
+    </script>
+</html>

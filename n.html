@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<div id="contanier">
+    		<p>这是段落</p>
+    		<div>这是div</div>
+    		<h3>这是标题</h3>
+    		<span>这是span</span>
+    		<p>这是段落</p>
+    		<div>这是div</div>
+    		<h3>这是标题</h3>
+    		<span>这是span</span>
+    	</div>
+    </body>
+    <script type="text/javascript">
+    	/*
+    	节点对象的nodeName属性
+    	如果是元素节点，得到的是标签的名字
+    	如果得到的是属性节点，得到的是属性的名字
+    	如果是文本节点，得到的是#text
+    	 */
+    	var container = document.getElementById("container");
+    	var elList = container.children;
+    	for(var i = 0; i < elList.length; i++){
+    		if(elList[i].nodeName == "p" || elList[i].nodeName == "div"){
+    			elList[i].setAttribute("style", "color:rad");
+    		}
+    	}
+
+    </script>
+</html>

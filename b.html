@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        	*{
+        		margin:0px;
+        		padding:0px;
+
+        	}
+        	#f1{
+        		height:400px;
+        		background:#067;
+        		margin-bottom:50px;
+        	}
+        	#f2{
+        		height:400px;
+        		background:#283;
+        		margin-bottom:50px;
+        	}
+        	#f3{
+        		height:400px;
+        		background:#259;
+        		margin-bottom:50px;
+        	}
+        	li{
+        		/*
+        		float:left;
+        		*/
+        		width:60px;
+        	}
+        	ul{
+        		position:fixed;
+        		left:10px;
+        		top:300px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<ul>
+    		<li>
+    			<a href="##" onclick="jump('#f1')">一楼</a>
+    		</li>
+    		<li>
+    			<a href="##" onclick="jump('#f2')">二楼</a>
+    		</li>
+    		<li>
+    			<a href="##" onclick="jump('#f3')">三楼</a>
+    		</li>
+    	</ul>
+    	<div id="f1"></div>
+    	<div id="f2"></div>
+    	<div id="f3"></div>
+    </body>
+    <script type="text/javascript">
+    	/*
+    	go(0),reload页面的重新加载
+    	*/
+    	//location.reload();
+    	function jump(arg){
+    		location.hash = arg;
+
+    	}
+    </script>
+</html>
